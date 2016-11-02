@@ -1,0 +1,24 @@
+<div class="">
+
+    <h3>Search your Movie!!!</h3>
+
+    <form ng-submit='view.submit(view.search)' class="ui action input">
+        <input type="text" ng-model="view.search">
+        <input type="submit" name="name" value="Submit" class="ui button">
+    </form>
+
+    <div class="ui cards" ng-repeat="movie in view.results">
+        <a ng-href="#/{{movie.imdbID}}">
+            <div class="card">
+                <div class="content">
+                    <div class="header">{{movie.Title}}</div>
+                    <div class="description">
+                        {{movie.Year}}
+                    </div>
+                </div>
+        </a>
+        </div>
+    </div>
+
+
+</div>
